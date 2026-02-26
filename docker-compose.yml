@@ -1,7 +1,6 @@
 services:
 
     getmail:
-      image: cb/getmail
       build: ./Dockerfiles     # for local build
       pull_policy: never
       environment:

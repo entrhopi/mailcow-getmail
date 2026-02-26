@@ -11,21 +11,21 @@ Install:
 -  Clone getmail
    ```
    cd /opt
-   git clone https://github.com/christianbur/getmail.git
-   cd /opt/getmail
+   git clone https://github.com/entrhopi/mailcow-getmail.git
+   cd /opt/mailcow-getmail
    ```
 - Copy the docker-compose.override.yml file to the mailcow-dockerized folder. Please check if there is already a docker-compose.override.yml in the mailcow directory!!
    ```
-   cp /opt/getmail/mailcow-dockerized_docker-compose.override.yml /opt/mailcow-dockerized/docker-compose.override.yml
+   cp /opt/mailcow-getmail/mailcow-dockerized_docker-compose.override.yml /opt/mailcow-dockerized/docker-compose.override.yml
    ```
 - Config file must be customized
   ```
-   cp /opt/getmail/conf/settings.ini.example  /opt/getmail/conf/settings.ini
-   vi /opt/getmail/conf/settings.ini
+   cp /opt/mailcow-getmail/conf/settings.ini.example  /opt/mailcow-getmail/conf/settings.ini
+   vi /opt/mailcow-getmail/conf/settings.ini
   ```
 - Start mailcow and getmail.
   ```
-   cd /opt/getmail
+   cd /opt/mailcow-getmail
    docker compose build 
    cd /opt/mailcow-dockerized
    docker compose  up -d
@@ -40,7 +40,7 @@ Install:
 
 # Config
 
-Getmail is configured with the configuration file .getmail/conf/settings.ini. Everything under [DEFAULT] applies to all IMAP accounts. Mostly only imap_hostname:, imap_username:, imap_password: have to be customized. In the source IMAP account only one folder is monitored (default = imap_sync_folder: INBOX), if the junk folder should also be monitored, two accounts must be created. 
+Getmail is configured with the configuration file ./mailcow-getmail/conf/settings.ini. Everything under [DEFAULT] applies to all IMAP accounts. Mostly only imap_hostname:, imap_username:, imap_password: have to be customized. In the source IMAP account only one folder is monitored (default = imap_sync_folder: INBOX), if the junk folder should also be monitored, two accounts must be created. 
 
  ```
 [INBOX_test_gmx.de]
