@@ -109,3 +109,11 @@ Alternatively, you can replace TZ=${TZ} with TZ="Europe/Berlin" in the docker-co
 
 If the TZ variable is not defined, the following error message appears when starting getmail:
 "WARNING: The TZ variable is not set. Defaulting to a blank string."
+
+
+
+
+# Credits
+
+- https://github.com/christianbur/getmail (original author)
+- https://github.com/mkrumbholz/getmail (further development)
